@@ -56,7 +56,7 @@
         <div class="jumbotron">
             <h1>Projects available</h1>
             <div>
-                <iframe src="list.html" frameborder="0" style="overflow: hidden; height: 100%; width: 100%;"></iframe>
+                <iframe id="list_sites" src="list.html" frameborder="0" style="overflow: hidden; height: 100%; width: 100%;"></iframe>
             </div>
         </div>
 
@@ -71,6 +71,12 @@
     <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
-  
+    <script type="text/javascript">
+      setInterval(refreshIframe, 30000);
+      function refreshIframe() {
+          var frame = document.getElementById("list_sites");
+          frame.src = frame.src;
+      }
+   </script>
 
 </body></html>
