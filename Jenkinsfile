@@ -14,6 +14,7 @@ pipeline {
             steps {
                 script {
                     sh 'cp index.html /var/www/html/index.html';
+                    sh 'cp list.html /var/www/html/list.html';
                 }
             }
         }
