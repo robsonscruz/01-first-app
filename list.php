@@ -1,5 +1,7 @@
 <?php
-// list projects in /var/www/alunos/*
-
-echo "Search projects in path xpto :)<br/>";
-echo "No projects found :(";
+$list = glob('/var/www/alunos/*', GLOB_ONLYDIR);
+foreach($list as $folder) {
+    $folder = basename($folder);
+    echo "<li><a href=\"/$folder\" target=\"_parent\">$folder</li>";
+}
+echo (count($list) === 0) ? 'No projects found :(' : '';
