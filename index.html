@@ -56,7 +56,7 @@
         <div class="jumbotron">
             <h1>Projects available</h1>
             <div>
-                <iframe id="list_sites" src="list.html" frameborder="0" style="overflow: hidden; height: 100%; width: 100%;"></iframe>
+                <iframe id="list_sites" src="list.php" frameborder="0" style="overflow: hidden; height: 100%; width: 100%;"></iframe>
             </div>
         </div>
 
@@ -75,7 +75,7 @@
       setInterval(refreshIframe, 20000);
       function refreshIframe() {
           var frame = document.getElementById("list_sites");
-          frame.src = `list.html?ts=${Math.round(new Date().getTime()/1000)}`
+          frame.src = `list.php?ts=${Math.round(new Date().getTime()/1000)}`
       }
    </script>
 
